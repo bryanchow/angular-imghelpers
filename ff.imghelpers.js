@@ -6,7 +6,7 @@
  * https://github.com/bryanchow/angular-imghelpers
  */
 
-(function(angular) {
+var ffImghelpers = (function(angular) {
 
     // Return true if high density imaging support is available
     function has2x() {
@@ -144,5 +144,16 @@
             };
         }
     ]);
+
+    return {
+        has2x: has2x,
+        shouldUse2x: shouldUse2x,
+        make2xUrl: make2xUrl,
+        make2x: make2x,
+        isInXView: isInXView,
+        isInYView: isInYView,
+        isInView: isInView,
+        module: module
+    };
 
 }(angular));
